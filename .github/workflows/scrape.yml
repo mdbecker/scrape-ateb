@@ -1,0 +1,46 @@
+name: Scrape latest data
+
+on:
+  push:
+  workflow_dispatch:
+  schedule:
+    - cron:  '0 * * * *'
+
+jobs:
+  scheduled:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out this repo
+      uses: actions/checkout@v2
+    - name: Fetch 2133b9d6b17e471ab5026a2955916bfb data
+      run: |-
+        bash 2133b9d6b17e471ab5026a2955916bfb.sh > 2133b9d6b17e471ab5026a2955916bfb.html
+    - name: Fetch 2b3dca575e5b487bbcd189fcd5262805 data
+      run: |-
+        bash 2b3dca575e5b487bbcd189fcd5262805.sh > 2b3dca575e5b487bbcd189fcd5262805.html
+    - name: Fetch 3f647956b456425d9c12360db8e4fdb4 data
+      run: |-
+        bash 3f647956b456425d9c12360db8e4fdb4.sh > 3f647956b456425d9c12360db8e4fdb4.html
+    - name: Fetch 8d8feb6dce7d4d598f753362d06d1e64 data
+      run: |-
+        bash 8d8feb6dce7d4d598f753362d06d1e64.sh > 8d8feb6dce7d4d598f753362d06d1e64.html
+    - name: Fetch b3fde86550b84e7882b1c09763f7b0ea data
+      run: |-
+        bash b3fde86550b84e7882b1c09763f7b0ea.sh > b3fde86550b84e7882b1c09763f7b0ea.html
+    - name: Fetch c20605cb988e4a18a3eab5f7fd466cf6 data
+      run: |-
+        bash c20605cb988e4a18a3eab5f7fd466cf6.sh > c20605cb988e4a18a3eab5f7fd466cf6.html
+    - name: Fetch c7f2e9cb1982412bb53430a84dfd72ad data
+      run: |-
+        bash c7f2e9cb1982412bb53430a84dfd72ad.sh > c7f2e9cb1982412bb53430a84dfd72ad.html
+    - name: Fetch de1d94cd20fa4641aa297c06a0b06699 data
+      run: |-
+        bash de1d94cd20fa4641aa297c06a0b06699.sh > de1d94cd20fa4641aa297c06a0b06699.html
+    - name: Commit and push if it changed
+      run: |-
+        git config user.name "Automated"
+        git config user.email "actions@users.noreply.github.com"
+        git add -A
+        timestamp=$(date -u)
+        git commit -m "Latest data: ${timestamp}" || exit 0
+        git push
