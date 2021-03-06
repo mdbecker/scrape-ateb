@@ -36,6 +36,9 @@ jobs:
     - name: Fetch de1d94cd20fa4641aa297c06a0b06699 data
       run: |-
         bash de1d94cd20fa4641aa297c06a0b06699.sh > de1d94cd20fa4641aa297c06a0b06699.html
+    - name: Fetch de1d94cd20fa4641aa297c06a0b06699 data
+      run: |-
+        bash d6acc13269c74cb2bb5e0e76ea538316.sh > d6acc13269c74cb2bb5e0e76ea538316.html
     - name: Commit and push if it changed
       run: |-
         git config user.name "Automated"
