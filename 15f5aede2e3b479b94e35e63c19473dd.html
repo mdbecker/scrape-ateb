@@ -11,14 +11,14 @@
     <script src="/chatbot/webchat.js"></script>
     <script src="/chatbot/adaptivecards.webchat-plugin.js"></script>
     <script>
-        var botUUID = 'b3fde86550b84e7882b1c09763f7b0ea';
+        var botUUID = '15f5aede2e3b479b94e35e63c19473dd';
         var endpoint = 'https://endpoint-chat.ateb.com/df425c2e5d5e1084510b834c2fddcda8a459d7239c01d1766380e3d49fa7f936';
 
         var settings = {
             settings: {
                 'agentAvatarUrl': '',
                 'backgroundImageUrl': '',
-                'colorScheme': '#FEDB00',
+                'colorScheme': '#62BB46',
                 'designTemplate': 2,
                 'disableBranding': true,
                 'disableHtmlInput': false,
@@ -37,7 +37,7 @@
                 'getStartedButtonText': '',
                 'getStartedPayload': botUUID,
                 'getStartedText': 'Please assist with my appointment.',
-                'headerLogoUrl': './pharm-bot.png',
+                'headerLogoUrl': './title-logo.png',
                 'inputPlaceholder': 'Type to me here.',
                 'messageDelay': 200,
                 'messageLogoUrl': './pharm-bot.png',
@@ -47,11 +47,11 @@
                 },
                 'startBehavior': 'injection',
                 'STTLanguage': '',
-                'title': 'Fresco y Más Pharmacy CareScheduler',
+                'title': 'COVID-19 PA',
                 'userAvatarUrl': '',
                 'useSessionStorage': false,
             }
-        };    
+        };  
         
         if (typeof newrelic === 'object') {
             newrelic.interaction()
