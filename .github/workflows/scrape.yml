@@ -18,9 +18,6 @@ jobs:
     - name: Fetch 2b3dca575e5b487bbcd189fcd5262805 data
       run: |-
         bash 2b3dca575e5b487bbcd189fcd5262805.sh > 2b3dca575e5b487bbcd189fcd5262805.html
-    - name: Fetch 3f647956b456425d9c12360db8e4fdb4 data
-      run: |-
-        bash 3f647956b456425d9c12360db8e4fdb4.sh > 3f647956b456425d9c12360db8e4fdb4.html
     - name: Fetch 8d8feb6dce7d4d598f753362d06d1e64 data
       run: |-
         bash 8d8feb6dce7d4d598f753362d06d1e64.sh > 8d8feb6dce7d4d598f753362d06d1e64.html
